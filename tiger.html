@@ -1,0 +1,129 @@
+<html>
+<head><title>tiger</title>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: grey;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: red;
+}
+
+.center {
+display: block;
+margin-left: 35%;
+
+width: 360px; /* or any other percentage */
+}
+body{background-color:navy;color:white;font-family:cursive;}
+td{padding-left:20px;}
+
+</style>
+ <script> 
+        function redirect() { 
+            const selectElement = document.getElementById("mySelect"); 
+            const selectedValue = selectElement.value; 
+ 
+            // Define your redirection URLs based on option values 
+            switch (selectedValue) { 
+                case "option1": 
+                    window.location.href = "monkey.html"; 
+                    break; 
+                case "option2": 
+                    window.location.href = "lion.html"; 
+                    break; 
+                case "option3": 
+                    window.location.href = "panda.html"; 
+                    break; 
+        
+                default: 
+                    alert("Please select a valid option."); 
+            } 
+        } 
+
+function checkQuizAnswers() {
+            let score = 0;
+            const totalQuestions = 3;
+
+            // Check answers
+            if (document.querySelector('input[name="q1"]:checked')?.value === 'A') {
+                score++;
+            }
+            if (document.querySelector('input[name="q2"]:checked')?.value === 'B') {
+                score++;
+            }
+            if (document.querySelector('input[name="q3"]:checked')?.value === 'A') {
+                score++;
+            }
+          
+
+
+            // Display result
+            const result = document.getElementById("quizResult");
+            result.textContent = "You scored " + score + " out of " + totalQuestions;
+            result.style.color = score === totalQuestions ? "green" : "red";
+        }
+    </script>
+</head>
+<body>
+
+<table STYLE="position:relative;margin-left:35%;"><tr><td>
+<image src="https://tse4.mm.bing.net/th?id=OIP.cbuzKfl-6z6fxmdh5JRP8gHaHa&pid=Api&P=0&h=180" height=150px width=150px></td><td><h1 style="font-size:56px;font-family:cursive;">Animals</h1></td></tr></table>
+
+<ul>
+  <li><a class="active" href="index.html" style="font-size:26px;">Home</a></li>
+  <li><select id="mySelect" onchange="redirect()" style="position:relative;margin-top:25px;"><option selected disabled>Tiger</option><option value="option1"><a href="pigeon.html" style="font-size:26px;">Monkey</a></option>
+  <option value="option2"><a href="crow.html" style="font-size:26px;">Lion</a></option>
+  <option value="option3"><a href="parrot.html" style="font-size:26px;">Panda</a></option></select>
+</li>
+
+
+<li><a href="aerial.html" style="font-size:26px;">Aerial</a></li>
+<li><a href="terrestrial.html" style="font-size:26px;">Terrestrial</a></li>
+<li><a href="aquatic.html" style="font-size:26px;">Aquatic</a></li>
+</ul>
+<br><br>
+<image src="https://th.bing.com/th/id/R.cced117aa9f69ebc9dd0a2f53e4c7f8c?rik=yGI6dxmnvgfPNA&riu=http%3a%2f%2fupload.wikimedia.org%2fwikipedia%2fcommons%2f4%2f41%2fSiberischer_tiger_de_edit02.jpg&ehk=GGilom7nKQmCZAUfgeH88I7IRQuLfOj%2fMi2ZH2t6KoI%3d&risl=&pid=ImgRaw&r=0" height=240px class="center">
+<p style="font-size:26px;">The tiger (Panthera tigris) is a large cat and a member of the genus Panthera native to Asia. It has a powerful, muscular body with a large head and paws, a long tail and orange fur with black, mostly vertical stripes. It is traditionally classified into nine recent subspecies, though some recognise only two subspecies, mainland Asian tigers and the island tigers of the Sunda Islands.<br><br> Throughout the tiger's range, it inhabits mainly forests, from coniferous and temperate broadleaf and mixed forests in the Russian Far East and Northeast China to tropical and subtropical moist broadleaf forests on the Indian subcontinent and Southeast Asia. The tiger is an apex predator and preys mainly on ungulates, which it takes by ambush. It lives a mostly solitary life and occupies home ranges, defending these from individuals of the same sex. The range of a male tiger overlaps with that of multiple females with whom he mates. Females give birth to usually two or three cubs that stay with their mother for about two years. When becoming independent, they leave their mother's home range and establish their own. India has the most tigers in the world.   <h3 style="font-size:26px;">MCQs</h3>
+    <form>
+        <p style="font-size:26px;">1. Tigers are?</p>
+        <label style="font-size:26px;"><input type="radio" name="q1" VALUE="A"> Apex Predators</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q1" VALUE="B"> Herbivores</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q1" VALUE="C"> Scavengers</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q1" VALUE="D"> Omnivores</label><br>
+
+        <p style="font-size:26px;">2. Which country that has the most tigers?</p>
+        <label style="font-size:26px;"><input type="radio" name="q2" VALUE="A"> Australia</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q2" VALUE="B"> India</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q2" VALUE="C"> Brazil</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q2" VALUE="D"> Russia</label><br>
+
+        <p style="font-size:26px;">3. Tigers like to eat?</p>
+        <label style="font-size:26px;"><input type="radio" name="q3" VALUE="A"> Meat</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q3" VALUE="B"> Bamboo</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q3" VALUE="C"> Dosa</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q3" VALUE="D"> Banana</label><br><br>
+
+   
+<table><tr><td>
+       <p style="font-weight: bold;font-family:cursive;font-size:26px;">Result: </p></td><td>
+<div id="quizResult" style="margin-top: 0px; font-weight: bold;font-family:cursive;font-size:26px;background-color:lightblue;"></div></td></tr></table><br>
+        <button type="button" style="font-size:26px;" onclick="checkQuizAnswers()">Submit</button>
+
+    </form>
+</p>
+</body>
+</html>

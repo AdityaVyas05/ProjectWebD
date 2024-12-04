@@ -1,0 +1,82 @@
+<html>
+<head><title>terrestrial</title>
+<style>
+body{background-color:navy;color:white;font-family:cursive;}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: grey;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: red;
+}
+td{padding-left:20px;}
+table{position:relative;margin-left:35%;}
+</style>
+ <script> 
+        function redirect() { 
+            const selectElement = document.getElementById("mySelect"); 
+            const selectedValue = selectElement.value; 
+ 
+            // Define your redirection URLs based on option values 
+            switch (selectedValue) { 
+                case "option1": 
+                    window.location.href = "panda.html"; 
+                    break; 
+                case "option2": 
+                    window.location.href = "monkey.html"; 
+                    break; 
+                case "option3": 
+                    window.location.href = "tiger.html"; 
+                    break; 
+                case "option4": 
+                    window.location.href = "lion.html"; 
+                    break; 
+                default: 
+                    alert("Please select a valid option."); 
+            } 
+        } 
+    </script>
+</head>
+<body>
+<table><tr><td>
+<image src="https://tse4.mm.bing.net/th?id=OIP.cbuzKfl-6z6fxmdh5JRP8gHaHa&pid=Api&P=0&h=180" height=150px width=150px></td><td><h1 style="font-size:56px;font-family:cursive;">Animals</h1></td></tr></table>
+<ul>
+  <li><a class="active" href="index.html" style="font-size:26px;">Home</a></li>
+  <li><select id="mySelect" onchange="redirect()" style="position:relative;margin-top:25px;"><option selected disabled>Animals</option><option value="option1"><a href="pigeon.html" style="font-size:26px;">Panda</a></option>
+  <option value="option2"><a href="crow.html" style="font-size:26px;">Monkey</a></option>
+  <option value="option3"><a href="parrot.html" style="font-size:26px;">Tiger</a></option>
+<option value="option4"><a style="font-size:26px;">Lion</a></option></select></li>
+<li><a href="aquatic.html" style="font-size:26px;">Aquatic</a></li>
+<li><a href="aerial.html" style="font-size:26px;">Aerial</a></li>
+
+</ul>
+<P style="font-size:26px;">Terrestrial habitats encompass all land-based environments, forming a critical component of Earth's biosphere. These diverse ecosystems support a vast array of organisms, including plants, animals, fungi, and microorganisms.
+
+Each habitat is characterized by specific abiotic factors like temperature, precipitation, and soil composition. These factors, along with biotic interactions, shape the unique communities found within each terrestrial environment.
+<br><br>    
+<image src="https://image1.slideserve.com/2911602/terrestrial-animals-l.jpg" height=190px width=320px style="position:relative;margin-left:33%;">  
+<br><br>
+Here's a breakdown of some major terrestrial habitat types:<br> <br><mark>Forests</mark>: dominated by trees, forests are categorized further based on factors like temperature and rainfall. Tropical rainforests boast the highest biodiversity, while temperate forests and boreal forests exhibit adaptations to cooler climates. Forests play a crucial role in the global carbon cycle and provide habitat for a multitude of species.<br><br>
+<mark>Grasslands</mark>: open plains dominated by grasses and other non-woody plants, grasslands are prevalent in regions with moderate rainfall. These ecosystems serve as vital grazing grounds for large herbivores, supporting food webs that include predators and scavengers.
+<br><br>
+
+<mark>Deserts</mark>: arid regions with minimal rainfall and extreme temperatures, deserts showcase remarkable adaptations for survival. Plants like cacti store water efficiently, while animals like kangaroo rats extract moisture from their diet. Despite the harsh conditions, deserts support a surprising diversity of life, including reptiles, insects, and specialized plant communities.
+<br><br>
+
+<mark>Tundras</mark>: treeless plains found in the Arctic and on mountaintops, tundras experience long, cold winters and short, cool summers. These harsh environments are dominated by low-lying plants like mosses and lichens. Well-adapted animals like caribou and arctic foxes can thrive in the cold. Tundras play a significant role in regulating Earth's climate by reflecting sunlight and storing carbon.</P>
+
+</body>
+</html>

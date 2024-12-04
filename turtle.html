@@ -1,0 +1,142 @@
+<html>
+<head><title>Turtle</title>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: grey;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: red;
+}
+
+.center {
+display: block;
+margin-left: 35%;
+
+width: 360px; /* or any other percentage */
+}
+body{background-color:navy;color:white;font-family:cursive;}
+td{padding-left:20px;}
+
+</style>
+ <script> 
+        function redirect() { 
+            const selectElement = document.getElementById("mySelect"); 
+            const selectedValue = selectElement.value; 
+ 
+            // Define your redirection URLs based on option values 
+            switch (selectedValue) { 
+                case "option1": 
+                    window.location.href = "octopus.html"; 
+                    break; 
+                case "option2": 
+                    window.location.href = "crocodiles.html"; 
+                    break; 
+                case "option3": 
+                    window.location.href = "shark.html"; 
+                    break; 
+                default: 
+                    alert("Please select a valid option."); 
+            } 
+        } 
+
+
+function checkQuizAnswers() {
+            let score = 0;
+            const totalQuestions = 3;
+
+            // Check answers
+            if (document.querySelector('input[name="q1"]:checked')?.value === 'A') {
+                score++;
+            }
+            if (document.querySelector('input[name="q2"]:checked')?.value === 'C') {
+                score++;
+            }
+            if (document.querySelector('input[name="q3"]:checked')?.value === 'B') {
+                score++;
+            }
+          
+
+
+            // Display result
+            const result = document.getElementById("quizResult");
+            result.textContent = "You scored " + score + " out of " + totalQuestions;
+            result.style.color = score === totalQuestions ? "green" : "red";
+        }
+    </script>
+</head>
+<body>
+
+<table STYLE="position:relative;margin-left:35%;"><tr><td>
+<image src="https://tse4.mm.bing.net/th?id=OIP.cbuzKfl-6z6fxmdh5JRP8gHaHa&pid=Api&P=0&h=180" height=150px width=150px></td><td><h1 style="font-size:56px;font-family:cursive;">Animals</h1></td></tr></table>
+
+<ul>
+  <li><a class="active" href="index.html" style="font-size:26px;">Home</a></li>
+  <li><select id="mySelect" onchange="redirect()" style="position:relative;margin-top:25px;"><option selected disabled>Turtle</option><option value="option1"><a href="octopus.html" style="font-size:26px;">Octopus</a></option>
+  <option value="option2"><a href="octopus.html" style="font-size:26px;">Crocodiles</a></option>
+  <option value="option3"><a href="turtle.html" style="font-size:26px;">Shark</a></option></select></li>
+<li><a href="aerial.html" style="font-size:26px;">Aerial</a></li>
+<li><a href="terrestrial.html" style="font-size:26px;">Terrestrial</a></li>
+<li><a href="aquatic.html" style="font-size:26px;">Aquatic</a></li>
+</ul>
+<br><br>
+<image src="data:image/jpeg;base64,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" height=240px class="center">
+<p style="font-size:26px;">Turtles are fascinating reptiles belonging to the order Testudines. They are easily recognized by their bony or cartilaginous shell, which acts as a protective shield. This shell is an integral part of their anatomy, composed of two parts: the carapace (upper shell) and the plastron (lower shell), which are connected by a bony bridge. They mostly use their lungs for breathing. Turtles are classified as reptiles because they share key characteristics typical of this group. Like other reptiles, turtles have a body covered in scales or scutes, they lay shelled eggs,
+<br>
+Characteristics:
+Habitat: Turtles are found in diverse habitats, including oceans, rivers, lakes, and on land.
+Diet: Depending on the species, turtles can be herbivorous, carnivorous, or omnivorous. Sea turtles, for instance, often feed on seagrass and jellyfish, while land turtles prefer fruits and vegetables.
+Lifespan: Many turtles are long-lived, with some species, like the Galápagos tortoise, living for over 100 years.
+<br>Types of Turtles:
+Sea Turtles: Marine species, such as the green sea turtle and leatherback, are adapted for life in water.
+Freshwater Turtles: These include species like the red-eared slider, commonly found in rivers and lakes.
+Tortoises: A type of turtle adapted to life on land, characterized by dome-shaped shells and sturdy legs.
+<br>Importance:
+Turtles play a crucial role in ecosystems. Sea turtles help maintain healthy seagrass beds, while freshwater turtles contribute to nutrient cycling in aquatic systems.
+Many turtle species are considered endangered due to habitat destruction, pollution, and poaching. Conservation efforts are vital to protect them.
+Turtles symbolize longevity, resilience, and wisdom in many cultures, making them not only ecologically important but also culturally significant creatures.
+
+   <h3 style="font-size:26px;">MCQs</h3>
+    <form>
+        <p style="font-size:26px;">1.Turtles are known for their?</p>
+        <label style="font-size:26px;"><input type="radio" name="q1" VALUE="A"> Hard Shells</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q1" VALUE="B"> Fast Speed</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q1" VALUE="C"> Sharp Claws</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q1" VALUE="D"> Loud Roars</label><br>
+
+        <p style="font-size:26px;">2.Turtles breathe through?</p>
+        <label style="font-size:26px;"><input type="radio" name="q2" VALUE="A"> Gills</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q2" VALUE="B"> skin</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q2" VALUE="C"> lungs</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q2" VALUE="D"> fins</label><br>
+
+        <p style="font-size:26px;">3. Turtles are classified as?</p>
+        <label style="font-size:26px;"><input type="radio" name="q3" VALUE="A"> Mammals</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q3" VALUE="B"> reptiles</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q3" VALUE="C"> birds</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q3" VALUE="D"> amphibians</label><br>
+        
+    <br>
+
+<table><tr><td>
+       <p style="font-weight: bold;font-family:cursive;font-size:26px;">Result: </p></td><td>
+<div id="quizResult" style="margin-top: 0px; font-weight: bold;font-family:cursive;font-size:26px;background-color:lightblue;"></div></td></tr></table><br>
+        <button type="button" style="font-size:26px;" onclick="checkQuizAnswers()">Submit</button>
+
+    </form>
+</p>
+</body>
+</html>

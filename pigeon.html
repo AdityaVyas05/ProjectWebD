@@ -1,0 +1,135 @@
+<html>
+<head><title>Pigeon</title>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: grey;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: red;
+}
+
+
+
+.center {
+display: block;
+margin-left: 35%;
+
+width: 360px; /* or any other percentage */
+}
+body{background-color:navy;color:white;font-family:cursive;}
+td{padding-left:20px;}
+
+</style>
+ <script> 
+        function redirect() { 
+            const selectElement = document.getElementById("mySelect"); 
+            const selectedValue = selectElement.value; 
+ 
+            // Define your redirection URLs based on option values 
+            switch (selectedValue) { 
+                case "option1": 
+                    window.location.href = "parrot.html"; 
+                    break; 
+                case "option2": 
+                    window.location.href = "crow.html"; 
+                    break; 
+                case "option3": 
+                    window.location.href = "bat.html"; 
+                    break; 
+               
+                default: 
+                    alert("Please select a valid option."); 
+            } 
+        } 
+
+function checkQuizAnswers() {
+            let score = 0;
+            const totalQuestions = 3;
+
+            // Check answers
+            if (document.querySelector('input[name="q1"]:checked')?.value === 'B') {
+                score++;
+            }
+            if (document.querySelector('input[name="q2"]:checked')?.value === 'B') {
+                score++;
+            }
+            if (document.querySelector('input[name="q3"]:checked')?.value === 'A') {
+                score++;
+            }
+          
+
+
+            // Display result
+            const result = document.getElementById("quizResult");
+            result.textContent = "You scored " + score + " out of " + totalQuestions;
+            result.style.color = score === totalQuestions ? "green" : "red";
+        }
+    </script>
+</head>
+<body>
+
+<table STYLE="position:relative;margin-left:35%;"><tr><td>
+<image src="https://tse4.mm.bing.net/th?id=OIP.cbuzKfl-6z6fxmdh5JRP8gHaHa&pid=Api&P=0&h=180"height=150px width=150px></td><td><h1 style="font-size:56px;font-family:cursive;">Animals</h1></td></tr></table>
+
+<ul>
+  <li><a class="active" href="index.html" style="font-size:26px;">Home</a></li>
+
+<li><select id="mySelect" onchange="redirect()" style="position:relative;margin-top:25px;"><option selected disabled>Pigeon</option><option value="option1"><a href="pigeon.html" style="font-size:26px;">Parrot</a></option>
+  <option value="option2"><a href="crow.html" style="font-size:26px;">Crow</a></option>
+  <option value="option3"><a href="parrot.html" style="font-size:26px;">Bats</a></option></select></li>
+<li><a href="aerial.html" style="font-size:26px;">Aerial</a></li>
+<li><a href="terrestrial.html" style="font-size:26px;">Terrestrial</a></li>
+<li><a href="aquatic.html" style="font-size:26px;">Aquatic</a></li>
+  </ul>
+<br><br>
+<image src="https://www.allaboutbirds.org/guide/assets/photo/308065631-480px.jpg" height=240px class="center">
+<p style="font-size:26px;">Pigeons are birds that belong to the family Columbidae, which includes around 310 species of birds. They are commonly found in urban and rural areas across the world. Pigeons are known for their ability to navigate long distances and their impressive homing skills, often being used in ancient times for communication. <br><br>
+                Pigeons have excellent eyesight and can see ultraviolet light.
+                They can fly at speeds up to 55 miles per hour.
+                Unlike most birds, pigeons can recognize themselves in a mirror.
+                Pigeons have been used in military operations, particularly in World War I and II, for carrying messages. <br>    <h3 style="font-size:26px;">MCQs</h3>
+    <form>
+        <p style="font-size:26px;">1. What is the primary diet of a pigeon?</p>
+        <label style="font-size:26px;"><input type="radio" name="q1" VALUE="A"> Seeds</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q1" VALUE="B"> Insects</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q1" VALUE="C"> Fruits</label><br>
+        
+
+        <p style="font-size:26px;">2. Which is the fastest speed a pigeon can fly?</p>
+        <label style="font-size:26px;"><input type="radio" name="q2" VALUE="A"> 30 mph</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q2" VALUE="B">55 mph</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q2" VALUE="C"> 70 mph</label><br>
+        
+
+        <p style="font-size:26px;">3.What special ability do pigeons possess?</p>
+        <label style="font-size:26px;"><input type="radio" name="q3" VALUE="A"> Navigation</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q3" VALUE="B"> Singing</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q3" VALUE="C"> Camouflage</label><br>
+        
+        
+      <br>
+
+
+<table><tr><td>
+       <p style="font-weight: bold;font-family:cursive;font-size:26px;">Result: </p></td><td>
+<div id="quizResult" style="margin-top: 0px; font-weight: bold;font-family:cursive;font-size:26px;background-color:lightblue;"></div></td></tr></table><br>
+        <button type="button" style="font-size:26px;" onclick="checkQuizAnswers()">Submit</button>
+
+    </form>
+</p>
+</body>
+</html>

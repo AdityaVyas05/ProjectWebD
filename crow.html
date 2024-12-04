@@ -1,0 +1,130 @@
+<html>
+<head><title>Crow</title>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: grey;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: red;
+}
+
+.center {
+display: block;
+margin-left: 35%;
+
+width: 360px; /* or any other percentage */
+}
+body{background-color:navy;color:white;font-family:cursive;}
+td{padding-left:20px;}
+
+</style>
+ <script> 
+        function redirect() { 
+            const selectElement = document.getElementById("mySelect"); 
+            const selectedValue = selectElement.value; 
+ 
+            // Define your redirection URLs based on option values 
+            switch (selectedValue) { 
+                case "option1": 
+                    window.location.href = "pigeon.html"; 
+                    break; 
+                case "option2": 
+                    window.location.href = "bat.html"; 
+                    break; 
+                case "option3": 
+                    window.location.href = "parrot.html"; 
+                    break; 
+                
+                default: 
+                    alert("Please select a valid option."); 
+            } 
+        } 
+
+function checkQuizAnswers() {
+            let score = 0;
+            const totalQuestions = 3;
+
+            // Check answers
+            if (document.querySelector('input[name="q1"]:checked')?.value === 'B') {
+                score++;
+            }
+            if (document.querySelector('input[name="q2"]:checked')?.value === 'B') {
+                score++;
+            }
+            if (document.querySelector('input[name="q3"]:checked')?.value === 'C') {
+                score++;
+            }
+
+            // Display result
+            const result = document.getElementById("quizResult");
+            result.textContent = "You scored " + score + " out of " + totalQuestions;
+            result.style.color = score === totalQuestions ? "green" : "red";
+        }
+    </script>
+</head>
+<body>
+
+<table STYLE="position:relative;margin-left:35%;"><tr><td>
+<image src="https://tse4.mm.bing.net/th?id=OIP.cbuzKfl-6z6fxmdh5JRP8gHaHa&pid=Api&P=0&h=180" height=150px width=150px></td><td><h1 style="font-size:56px;font-family:cursive;">Animals</h1></td></tr></table>
+
+<ul>
+  <li><a class="active" href="index.html" style="font-size:26px;">Home</a></li>
+
+<li><select id="mySelect" onchange="redirect()" style="position:relative;margin-top:25px;"><option selected disabled>Crow</option><option value="option1"><a href="pigeon.html" style="font-size:26px;">Pigeon</a></option>
+  <option value="option2"><a href="crow.html" style="font-size:26px;">Bats</a></option>
+  <option value="option3"><a href="parrot.html" style="font-size:26px;">Parrot</a></option></select></li>
+<li><a href="aerial.html" style="font-size:26px;">Aerial</a></li>
+<li><a href="terrestrial.html" style="font-size:26px;">Terrestrial</a></li>
+<li><a href="aquatic.html" style="font-size:26px;">Aquatic</a></li>
+  </ul>
+<br><br>
+<image src="https://s3.animalia.bio/animals/photos/small/1x1/Ud4EjvdW6USiFTtPW0hD.webp?id=6851a638d1da7cc5556eeb1d8a42aaa5" height=240px class="center">
+<p style="font-size:26px;">Crows are highly intelligent birds that belong to the genus <em>Corvus</em>, a part of the family Corvidae. They are found in many parts of the world and are known for their problem-solving abilities, complex social structures, and strong communication skills.<br><br>     
+        Crows can use tools to access food, something few animals can do.
+        They can recognize human faces and even remember them for years.
+        Crows have an extensive vocabulary of calls and are capable of mimicking sounds from their environment.
+        They are social birds and often form large groups called "murders".
+    <br><br>Crows are found in a wide range of habitats, including forests, grasslands, urban areas, and coastal regions. They are adaptable and can thrive in environments modified by humans, such as cities and farmland. <br><br> Crows are omnivores, meaning they eat both plant and animal material. They are opportunistic feeders and will eat a variety of foods including seeds, fruits, small animals, and even garbage.<br><br>   <h3 style="font-size:26px;">MCQs</h3>
+    <form>
+        <p style="font-size:26px;">1. What is the main characteristic of crows?</p>
+        <label style="font-size:26px;"><input type="radio" name="q1" value="A"> They play hide and seek.</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q1"value="B"> They are highly intelligent.</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q1"value="C">  They can only live in forests.</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q1"value="D"> They are migratory birds</label><br>
+
+        <p style="font-size:26px;">2. Where can crows be found?</p>
+        <label style="font-size:26px;"><input type="radio" name="q2"value="A"> Only in rural areas.</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q2"value="B"> They are found in a variety of habitats worldwide.</label><BR>
+        <label style="font-size:26px;"><input type="radio" name="q2"value="C"> Only in tropical regions</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q2"value="D"> They are only found in deserts</label><br>
+
+        <p style="font-size:26px;">3. What do crows primarily eat?</p>
+        <label style="font-size:26px;"><input type="radio" name="q3"value="A"> Only seeds and fruits</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q3"value="B"> Only small animals.</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q3"value="C"> Both plant and animal material.</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q3"value="D"> Only garbage</label><br>
+       <BR> 
+  
+<table><tr><td>
+       <p style="font-weight: bold;font-family:cursive;font-size:26px;">Result: </p></td><td>
+<div id="quizResult" style="margin-top: 0px; font-weight: bold;font-family:cursive;font-size:26px;background-color:lightblue;"></div></td></tr></table><br>
+        <button type="button" style="font-size:26px;" onclick="checkQuizAnswers()">Submit</button>
+
+    </form>
+</p>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<html>
+<head><title>Parrot</title>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: grey;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: red;
+}
+
+.center {
+display: block;
+margin-left: 35%;
+
+width: 360px; /* or any other percentage */
+}
+body{background-color:navy;color:white;font-family:cursive;}
+td{padding-left:20px;}
+
+</style>
+ <script> 
+        function redirect() { 
+            const selectElement = document.getElementById("mySelect"); 
+            const selectedValue = selectElement.value; 
+ 
+            // Define your redirection URLs based on option values 
+            switch (selectedValue) { 
+                case "option1": 
+                    window.location.href = "pigeon.html"; 
+                    break; 
+                case "option2": 
+                    window.location.href = "crow.html"; 
+                    break; 
+                case "option3": 
+                    window.location.href = "bat.html"; 
+                    break; 
+               
+                default: 
+                    alert("Please select a valid option."); 
+            } 
+        } 
+
+function checkQuizAnswers() {
+            let score = 0;
+            const totalQuestions = 3;
+
+            // Check answers
+            if (document.querySelector('input[name="q1"]:checked')?.value === 'A') {
+                score++;
+            }
+            if (document.querySelector('input[name="q2"]:checked')?.value === 'C') {
+                score++;
+            }
+            if (document.querySelector('input[name="q3"]:checked')?.value === 'B') {
+                score++;
+            }
+          
+
+
+            // Display result
+            const result = document.getElementById("quizResult");
+            result.textContent = "You scored " + score + " out of " + totalQuestions;
+            result.style.color = score === totalQuestions ? "green" : "red";
+        }
+    </script>
+</head>
+<body>
+
+<table STYLE="position:relative;margin-left:35%;"><tr><td>
+<image src="https://tse4.mm.bing.net/th?id=OIP.cbuzKfl-6z6fxmdh5JRP8gHaHa&pid=Api&P=0&h=180" height=150px width=150px></td><td><h1 style="font-size:56px;font-family:cursive;">Animals</h1></td></tr></table>
+
+
+<ul>
+  <li><a class="active" href="index.html" style="font-size:26px;">Home</a></li>
+
+<li><select id="mySelect" onchange="redirect()" style="position:relative;margin-top:25px;"><option selected disabled>Parrot</option><option value="option1"><a href="pigeon.html" style="font-size:26px;">Pigeon</a></option>
+  <option value="option2"><a href="crow.html" style="font-size:26px;">Crow</a></option>
+  <option value="option3"><a href="parrot.html" style="font-size:26px;">Bats</a></option></select></li>
+<li><a href="aerial.html" style="font-size:26px;">Aerial</a></li>
+<li><a href="terrestrial.html" style="font-size:26px;">Terrestrial</a></li>
+<li><a href="aquatic.html" style="font-size:26px;">Aquatic</a></li>
+  </ul>
+<br><br>
+<image src="https://images.pexels.com/photos/1463295/pexels-photo-1463295.jpeg?cs=srgb&dl=pexels-frans-van-heerden-201846-1463295.jpg&fm=jpg" height=240px class="center">
+<p style="font-size:26px;">Parrots are colorful and intelligent birds that belong to the family Psittacidae. They are known for their ability to mimic human speech and their vibrant feathers. Parrots are found in tropical and subtropical regions around the world.Parrots have a highly developed brain, making them one of the most intelligent bird species.  There are around 393 species of parrots worldwide, including macaws, cockatoos, and parakeets. Parrots use their strong beaks to crack open nuts, seeds, and fruits, and can even use tools in the wild. Some species of parrots live up to 80 years in captivity!.Parrots are highly social and love interaction. They form strong bonds with their owners and other members of their flock. In the wild, they live in large flocks, and many species of parrots can even recognize individual members of their flock.Many parrot species are endangered due to habitat loss and illegal pet trade. Conservation efforts are essential to protect these beautiful creatures. You can help by supporting wildlife organizations and promoting responsible pet ownership.<h3 style="font-size:26px;">MCQs</h3>
+    <form>
+        <p style="font-size:26px;">1. Which of the following is a popular feature of parrots?</p>
+        <label style="font-size:26px;"><input type="radio" name="q1" VALUE="A"> Ability to mimic human speech</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q1" VALUE="B"> Can fly backward</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q1" VALUE="C"> Always build nests in the ground</label><br>
+       
+
+        <p style="font-size:26px;">2. How long can some species of parrots live in captivity?</p>
+        <label style="font-size:26px;"><input type="radio" name="q2" VALUE="A"> 5 years</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q2" VALUE="B"> 20 years</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q2" VALUE="C"> Up to 80 years</label><br>
+        
+
+        <p style="font-size:26px;">3. What is the main reason for the decline in parrot populations?</p>
+        <label style="font-size:26px;"><input type="radio" name="q3" VALUE="A"> Climate change</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q3" VALUE="B"> Illegal pet trade and habitat loss</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q3 VALUE="C"> Natural predators</label><br>
+        
+    <br>
+
+<table><tr><td>
+       <p style="font-weight: bold;font-family:cursive;font-size:26px;">Result: </p></td><td>
+<div id="quizResult" style="margin-top: 0px; font-weight: bold;font-family:cursive;font-size:26px;background-color:lightblue;"></div></td></tr></table><br>
+        <button type="button" style="font-size:26px;" onclick="checkQuizAnswers()">Submit</button>
+
+    </form>
+</p>
+</body>
+</html>

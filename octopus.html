@@ -1,0 +1,127 @@
+<html>
+<head><title>octopus</title>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: grey;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: red;
+}
+
+.center {
+display: block;
+margin-left: 35%;
+
+width: 360px; /* or any other percentage */
+}
+body{background-color:navy;color:white;font-family:cursive;}
+td{padding-left:20px;}
+
+
+</style>
+ <script> 
+        function redirect() { 
+            const selectElement = document.getElementById("mySelect"); 
+            const selectedValue = selectElement.value; 
+ 
+            // Define your redirection URLs based on option values 
+            switch (selectedValue) { 
+                case "option1": 
+                    window.location.href = "shark.html"; 
+                    break; 
+                case "option2": 
+                    window.location.href = "crocodiles.html"; 
+                    break; 
+                case "option3": 
+                    window.location.href = "turtle.html"; 
+                    break; 
+                default: 
+                    alert("Please select a valid option."); 
+            } 
+        } 
+function checkQuizAnswers() {
+            let score = 0;
+            const totalQuestions = 3;
+
+            // Check answers
+            if (document.querySelector('input[name="q1"]:checked')?.value === 'A') {
+                score++;
+            }
+            if (document.querySelector('input[name="q2"]:checked')?.value === 'B') {
+                score++;
+            }
+            if (document.querySelector('input[name="q3"]:checked')?.value === 'C') {
+                score++;
+            }
+          
+
+
+            // Display result
+            const result = document.getElementById("quizResult");
+            result.textContent = "You scored " + score + " out of " + totalQuestions;
+            result.style.color = score === totalQuestions ? "green" : "red";
+        }
+ 
+    </script>
+</head>
+<body>
+
+<table STYLE="position:relative;margin-left:35%;"><tr><td>
+<image src="https://tse4.mm.bing.net/th?id=OIP.cbuzKfl-6z6fxmdh5JRP8gHaHa&pid=Api&P=0&h=180" height=150px width=150px></td><td><h1 style="font-size:56px;font-family:cursive;">Animals</h1></td></tr></table>
+
+<ul>
+  <li><a class="active" href="index.html" style="font-size:26px;">Home</a></li>
+  <li><select id="mySelect" onchange="redirect()" style="position:relative;margin-top:25px;"><option selected disabled>Octopus</option><option value="option1"><a href="shark.html" style="font-size:26px;">Shark</a></option>
+  <option value="option2"><a href="octopus.html" style="font-size:26px;">Crocodiles</a></option>
+  <option value="option3"><a href="turtle.html" style="font-size:26px;">Turtle</a></option></select></li>
+<li><a href="aerial.html" style="font-size:26px;">Aerial</a></li>
+<li><a href="terrestrial.html" style="font-size:26px;">Terrestrial</a></li>
+<li><a href="aquatic.html" style="font-size:26px;">Aquatic</a></li>
+</ul>
+<br><br>
+<image src="https://animalfactguide.com/wp-content/uploads/2024/01/common-octopus3.jpg" height=240px class="center">
+<p style="font-size:26px;">The octopus is a fascinating marine creature known for its intelligence, adaptability, and unique physical features. It belongs to the class Cephalopoda, which also includes squids, cuttlefish, and nautiluses. There are over 300 species of octopuses, found in various marine environments worldwide, from shallow coastal waters to deep oceans. Key Features: Body Structure: Octopuses have soft, flexible bodies without any bones. They have eight arms equipped with suction cups, used for gripping, exploring, and manipulating objects. Intelligence: They are among the most intelligent invertebrates, capable of problem-solving, tool use, and even escaping from enclosures. Octopuses have a large brain and a decentralized nervous system, with neurons spread throughout their arms. Camouflage: Their ability to change color and texture allows them to blend seamlessly with their surroundings, thanks to specialized skin cells called chromatophores. This skill helps them evade predators and communicate with other creatures. Defense Mechanisms: Besides camouflage, octopuses release ink to confuse predators and make a quick escape. Some species can detach an arm as a distraction, which later regenerates. Reproduction: Octopuses are solitary creatures, and reproduction is one of the few times they interact with others. Females lay thousands of eggs and often die shortly after their offspring hatch. Lifespan: Most octopus species have a relatively short lifespan, typically ranging from 1 to 5 years. Fun Facts: An octopus can squeeze through any opening larger than its beak, the only hard part of its body. The blue-ringed octopus, despite its small size, is one of the most venomous marine animals. The octopus is a symbol of mystery and adaptability in the ocean, admired for its remarkable abilities and enigmatic behavior.   <h3 style="font-size:26px;">MCQs</h3>
+    <form>
+        <p style="font-size:26px;">1.  Octopuses are known for their?</p>
+        <label style="font-size:26px;"><input type="radio" name="q1" VALUE="A"> Eight Arms</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q1" VALUE="B">  Hard Shells</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q1" VALUE="C">  Sharp Teeth</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q1" VALUE="D">  Loud Calls</label><br>
+
+        <p style="font-size:26px;">2.  Octopuses can breathe through?</p>
+        <label style="font-size:26px;"><input type="radio" name="q2" VALUE="A"> Lungs</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q2" VALUE="B"> Gills</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q2" VALUE="C"> Skin</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q2" VALUE="D"> Tentacles</label><br>
+
+        <p style="font-size:26px;">3.Octopuses are classified as?</p>
+        <label style="font-size:26px;"><input type="radio" name="q3" VALUE="A"> Mammals</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q3" VALUE="B"> Reptiles</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q3" VALUE="C"> Cephalopods</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q3" VALUE="D"> Amphibians</label><br>
+        
+        
+<br>
+<table><tr><td>
+       <p style="font-weight: bold;font-family:cursive;font-size:26px;">Result: </p></td><td>
+<div id="quizResult" style="margin-top: 0px; font-weight: bold;font-family:cursive;font-size:26px;background-color:lightblue;"></div></td></tr></table><br>
+        <button type="button" style="font-size:26px;" onclick="checkQuizAnswers()">Submit</button>
+
+    </form>
+</p>
+</body>
+</html>

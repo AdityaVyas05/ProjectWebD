@@ -1,0 +1,128 @@
+<html>
+<head><title>Bats</title>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: grey;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: red;
+}
+
+.center {
+display: block;
+margin-left: 35%;
+
+width: 360px; /* or any other percentage */
+}
+body{background-color:navy;color:white;font-family:cursive;}
+td{padding-left:20px;}
+
+
+</style>
+ <script> 
+        function redirect() { 
+            const selectElement = document.getElementById("mySelect"); 
+            const selectedValue = selectElement.value; 
+ 
+            // Define your redirection URLs based on option values 
+            switch (selectedValue) { 
+                case "option1": 
+                    window.location.href = "pigeon.html"; 
+                    break; 
+                case "option2": 
+                    window.location.href = "crow.html"; 
+                    break; 
+                case "option3": 
+                    window.location.href = "parrot.html"; 
+                    break; 
+               
+                default: 
+                    alert("Please select a valid option."); 
+            } 
+        } 
+
+
+
+function checkQuizAnswers() {
+            let score = 0;
+            const totalQuestions = 3;
+
+            // Check answers
+            if (document.querySelector('input[name="q1"]:checked')?.value === 'B') {
+                score++;
+            }
+            if (document.querySelector('input[name="q2"]:checked')?.value === 'A') {
+                score++;
+            }
+            if (document.querySelector('input[name="q3"]:checked')?.value === 'B') {
+                score++;
+            }
+
+            // Display result
+            const result = document.getElementById("quizResult");
+            result.textContent = "You scored " + score + " out of " + totalQuestions;
+            result.style.color = score === totalQuestions ? "green" : "red";
+        }
+
+    </script>
+</head>
+<body>
+
+<table style="position:relative;margin-left:35%;"><tr><td>
+<image src="https://tse4.mm.bing.net/th?id=OIP.cbuzKfl-6z6fxmdh5JRP8gHaHa&pid=Api&P=0&h=180" height=150px width=150px></td><td><h1 style="font-size:56px;font-family:cursive;">Animals</h1></td></tr></table>
+
+<ul>
+  <li><a class="active" href="index.html" style="font-size:26px;">Home</a></li>
+
+<li><select id="mySelect" onchange="redirect()" style="position:relative;margin-top:25px;"><option selected disabled>Bats</option><option value="option1"><a href="pigeon.html" style="font-size:26px;">Pigeon</a></option>
+  <option value="option2"><a href="crow.html" style="font-size:26px;">Crow</a></option>
+  <option value="option3"><a href="parrot.html" style="font-size:26px;">Parrot</a></option></select></li>
+<li><a href="aerial.html" style="font-size:26px;">Aerial</a></li>
+<li><a href="terrestrial.html" style="font-size:26px;">Terrestrial</a></li>
+<li><a href="aquatic.html" style="font-size:26px;">Aquatic</a></li>
+  </ul>
+<br><br>
+<image src="data:image/jpeg;base64,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" height=240px class="center">
+<p style="font-size:26px;">Bats are the only mammals capable of true flight. They belong to the order Chiroptera and are found all over the world except in extreme deserts and polar regions. There are over 1,400 species of bats, making them the second largest order of mammals.<br><br>Bats have specialized wings that allow them to perform a wide range of flight patterns. Their wings are formed from a thin membrane of skin stretched between elongated finger bones, making them highly maneuverable in the air. Unlike birds, which flap their wings up and down, bats use a combination of flapping and gliding, allowing them to fly more efficiently and navigate tight spaces.<br><br>Bats use echolocation to navigate and hunt, especially at night. They emit high-frequency sound waves that bounce off objects and return to the bat’s ears. By analyzing these echoes, bats can determine the size, shape, and distance of objects in their environment. This ability helps them locate prey, avoid obstacles, and navigate even in complete darkness .<br><br>Bats can live up to 30 years in the wild.Some species of bats can eat up to half their body weight in insects every night. Not all bats are nocturnal. Some, like the fruit bat, are active during the day. Bat populations are important for controlling insect populations, especially mosquitoes.<h3 style="font-size:26px;">MCQs</h3>
+    <form>
+        <p style="font-size:26px;">1. How do bats navigate in the dark?</p>
+        <label style="font-size:26px;"><input type="radio" name="q1" value="A"> Vision</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q1" value="B"> Echolocation</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q1" value="C">  Smell</label><br>
+        
+
+        <p style="font-size:26px;">2.What is the only mammal capable of true flight?</p>
+        <label style="font-size:26px;"><input type="radio" name="q2" value="A"> Bat</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q2" value="B"> Bird</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q2" value="C"> Insect</label><br>
+        
+
+        <p style="font-size:26px;">3.What do most bats eat?</p>
+        <label style="font-size:26px;"><input type="radio" name="q3" value="A"> Fruits</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q3" value="B"> Insects</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q3" value="C"> Fish</label><br>
+    <br>
+        <table><tr><td>
+       <p style="font-weight: bold;font-family:cursive;font-size:26px;">Result: </p></td><td>
+<div id="quizResult" style="margin-top: 0px; font-weight: bold;font-family:cursive;font-size:26px;background-color:lightblue;"></div></td></tr></table><br>
+        <button type="button" style="font-size:26px;" onclick="checkQuizAnswers()">Submit</button>
+    </form>
+</p>
+
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<html>
+<head><title>Crocodiles</title>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: grey;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: red;
+}
+
+.center {
+display: block;
+margin-left: 35%;
+
+width: 360px; /* or any other percentage */
+}
+body{background-color:navy;color:white;font-family:cursive;}
+td{padding-left:20px;}
+
+
+</style>
+  <script> 
+        function redirect() { 
+            const selectElement = document.getElementById("mySelect"); 
+            const selectedValue = selectElement.value; 
+ 
+            // Define your redirection URLs based on option values 
+            switch (selectedValue) { 
+                case "option1": 
+                    window.location.href = "shark.html"; 
+                    break; 
+                case "option2": 
+                    window.location.href = "octopus.html"; 
+                    break; 
+                case "option3": 
+                    window.location.href = "turtle.html"; 
+                    break; 
+                default: 
+                    alert("Please select a valid option."); 
+            } 
+        } 
+
+function checkQuizAnswers() {
+            let score = 0;
+            const totalQuestions = 3;
+
+            // Check answers
+            if (document.querySelector('input[name="q1"]:checked')?.value === 'A') {
+                score++;
+            }
+            if (document.querySelector('input[name="q2"]:checked')?.value === 'A') {
+                score++;
+            }
+            if (document.querySelector('input[name="q3"]:checked')?.value === 'B') {
+                score++;
+            }
+
+            // Display result
+            const result = document.getElementById("quizResult");
+            result.textContent = "You scored " + score + " out of " + totalQuestions;
+            result.style.color = score === totalQuestions ? "green" : "red";
+        }
+    </script>
+</head>
+<body>
+
+<table style="position:relative;margin-left:35%;"><tr><td>
+<image src="https://tse4.mm.bing.net/th?id=OIP.cbuzKfl-6z6fxmdh5JRP8gHaHa&pid=Api&P=0&h=180" height=150px width=150px></td><td><h1 style="font-size:56px;font-family:cursive;">Animals</h1></td></tr></table>
+
+<ul>
+  <li><a class="active" href="index.html" style="font-size:26px;">Home</a></li>
+  <li><select id="mySelect" onchange="redirect()" style="position:relative;margin-top:25px;"><option selected disabled>Crocodiles</option><option value="option1"><a href="shark.html" style="font-size:26px;">Shark</a></option>
+  <option value="option2"><a href="octopus.html" style="font-size:26px;">Octopus</a></option>
+  <option value="option3"><a href="turtle.html" style="font-size:26px;">Turtle</a></option></select></li>
+<li><a href="aerial.html" style="font-size:26px;">Aerial</a></li>
+<li><a href="terrestrial.html" style="font-size:26px;">Terrestrial</a></li>
+<li><a href="aquatic.html" style="font-size:26px;">Aquatic</a></li>
+</ul>
+
+<br><br>
+<image src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTrjigpnhso_N1ThEn-BvIddsT5qBHWrg4wzBiT6EJktJHIi-Bz" height=240px class="center">
+<p style="font-size:26px;">Crocodylia  is an order of semiaquatic, predatory reptiles known as crocodilians. They first appeared during the Late Cretaceous and are the closest living relatives of birds. Crocodilians are a type of crocodylomorph pseudosuchian, a subset of archosaurs that appeared about 235 million years ago and were the only survivors of the Triassic–Jurassic extinction event. The order includes the true crocodiles (family Crocodylidae), the alligators and caimans (family Alligatoridae), and the gharial and false gharial (family Gavialidae). Although the term "crocodiles" is sometimes used to refer to all of these, it is less ambiguous to use "crocodilians".
+
+Extant crocodilians have long flat heads with long snouts and tails compressed on the sides, with their eyes, ears, and nostrils at the top of the head. Alligators and caimans tend to have broader U-shaped jaws, that when closed, only show the upper teeth, while crocodiles usually have narrower V-shaped jaws with both rows of teeth visible when closed. Gharials have extremely slender and elongated jaws. All crocodilians are good swimmers and can move on land in a "high walk" position, traveling with their legs erect rather than sprawling. Crocodilians have thick skin covered in non-overlapping scales. They have conical, peg-like teeth and a powerful bite. Like birds, crocodilians possess a four-chambered heart and lungs with unidirectional airflow. Like most other reptiles, they are ectotherms.  <h3 style="font-size:26px;">MCQs</h3>
+    <form>
+        <p style="font-size:26px;">1. Crocodiles are not found in?</p>
+        <label style="font-size:26px;"><input type="radio" name="q1" value="A"> Antartica</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q1"value="B"> India</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q1"value="C"> Russia</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q1"value="D"> Canada</label><br>
+
+        <p style="font-size:26px;">2. Crocodiles are known for their?</p>
+        <label style="font-size:26px;"><input type="radio" name="q2"value="A">  Powerful Jaws</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q2"value="B">Weak Legs</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q2"value="C">  Fluffy Fur</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q2"value="D">Small Teeth</label><br>
+
+        <p style="font-size:26px;">3.  Crocodiles breathe through?</p>
+        <label style="font-size:26px;"><input type="radio" name="q3"value="A">  Gills</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q3"value="B"> Lungs</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q3"value="C"> Skin</label><br>
+        <label style="font-size:26px;"><input type="radio" name="q3"value="D"> Fine</label><br>
+        <br>
+      
+<table><tr><td>
+       <p style="font-weight: bold;font-family:cursive;font-size:26px;">Result: </p></td><td>
+<div id="quizResult" style="margin-top: 0px; font-weight: bold;font-family:cursive;font-size:26px;background-color:lightblue;"></div></td></tr></table><br>
+        <button type="button" style="font-size:26px;" onclick="checkQuizAnswers()">Submit</button>
+
+    </form>
+</p>
+</body>
+</html>
